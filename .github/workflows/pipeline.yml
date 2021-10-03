@@ -5,14 +5,11 @@ on:
     branches:
       - main
 jobs:
-  Checkout:
+  tests:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Code
           uses: actions/checkout@v2
-  RunTests:
-      runs-on: ubuntu-latest
-      steps:
         - name: Run tests
           run: echo 'Running tests'
   
