@@ -10,6 +10,15 @@ jobs:
       steps:
         - name: Checkout Code
           uses: actions/checkout@v2
+        - name: Set up gradle
+          uses: actions/setup-java@v2
+          with:
+            java-version: '11'
+            distribution: 'adopt'
+        - name: Validate Gradle wrapper
+          uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
         - name: Run tests
-          run: echo 'Running tests'
+          run: ./gradlew 
+        - name: Build
+          run: ./gradlew --build-cache -x test build
   
