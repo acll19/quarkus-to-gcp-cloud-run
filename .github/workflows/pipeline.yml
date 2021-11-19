@@ -41,5 +41,4 @@ jobs:
             file: ./Dockerfile
             push: true
             tags: |
-              ${{ env.DOCKER_IMAGE_NAME }}:${{ GITHUB_RUN_NUMBER }}
               ${{ env.DOCKER_IMAGE_NAME }}:latest
