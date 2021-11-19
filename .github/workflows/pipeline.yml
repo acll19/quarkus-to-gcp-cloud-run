@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-  Test:
+  TestAndBuild:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Code
@@ -19,9 +19,6 @@ jobs:
           uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
         - name: Run tests
           run: ./gradlew test
-  Build:
-      runs-on: ubuntu-latest
-      steps:
         - name: Build
           run: | 
             cp src/main/docker/Dockerfile.native Dockerfile
