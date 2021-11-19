@@ -20,5 +20,5 @@ jobs:
         - name: Run tests
           run: ./gradlew 
         - name: Build
-          run: ./gradlew --build-cache -x test build
-  
+          run: cp src/main/docker/Dockerfile.native Dockerfile
+          run: ./gradlew -x test build -Dquarkus.package.type=native  
