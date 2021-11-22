@@ -5,8 +5,8 @@ on:
     branches:
       - main
 jobs:
-  strategy:
-    max-parallel: 1
+  # strategy:
+  #   max-parallel: 1
   TestAndBuild:
       env:
         DOCKER_IMAGE_NAME: us-east4-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/quarkus-gcp-cloud-run-demo
