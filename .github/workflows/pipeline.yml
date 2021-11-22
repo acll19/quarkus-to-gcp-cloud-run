@@ -7,7 +7,7 @@ on:
 jobs:
   TestAndBuild:
       env:
-        DOCKER_IMAGE_NAME: gcr.io/my-images/quarkus-gcp-cloud-run-demo
+        DOCKER_IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/my-images/quarkus-gcp-cloud-run-demo
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Code
